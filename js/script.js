@@ -9,23 +9,20 @@ const slideCount = slides.length;
 function updateCarousel() {
     if (slideCount === 0) return;
 
-    // Mede a largura exata do card horizontal e o espaçamento (gap)
     const slideWidth = slides[0].getBoundingClientRect().width;
     const computedStyle = window.getComputedStyle(track);
     const gap = parseFloat(computedStyle.gap) || 15;
 
-    // Calcula o deslocamento linear horizontal puramente no eixo X
     const moveAmount = currentIndex * (slideWidth + gap);
 
     track.style.transform = `translateX(-${moveAmount}px)`;
 }
 
-// Funções de Direção
 function nextSlide() {
     if (currentIndex < slideCount - 1) {
         currentIndex++;
     } else {
-        currentIndex = 0; // Quando chega na última foto, volta suavemente para a primeira
+        currentIndex = 0; 
     }
     updateCarousel();
 }
@@ -34,25 +31,21 @@ function prevSlide() {
     if (currentIndex > 0) {
         currentIndex--;
     } else {
-        currentIndex = slideCount - 1; // Volta para a última foto
+        currentIndex = slideCount - 1; 
     }
     updateCarousel();
 }
 
-// --- SISTEMA DE AUTOPLAY INFINITO ---
-// Executa a função 'nextSlide' automaticamente a cada 3000 milissegundos (3 segundos)
-let autoplayTimer = setInterval(nextSlide, 1000);
+let autoplayTimer = setInterval(nextSlide, 2000);
 
-// Função essencial para resetar o tempo se o usuário decidir passar manualmente nos botões
 function restartAutoplay() {
     clearInterval(autoplayTimer);
     autoplayTimer = setInterval(nextSlide, 3000);
 }
 
-// Eventos de Clique nos Botões Manuais
 nextBtn.addEventListener('click', () => {
     nextSlide();
-    restartAutoplay(); // Evita que o slide mude logo em seguida do clique
+    restartAutoplay(); 
 });
 
 prevBtn.addEventListener('click', () => {
@@ -60,5 +53,5 @@ prevBtn.addEventListener('click', () => {
     restartAutoplay();
 });
 
-// Inicialização imediata
 window.addEventListener('DOMContentLoaded', updateCarousel);
+window.addEventListener('resize', updateCarousel);
