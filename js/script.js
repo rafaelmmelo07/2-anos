@@ -36,11 +36,11 @@ function prevSlide() {
     updateCarousel();
 }
 
-let autoplayTimer = setInterval(nextSlide, 2000);
+let autoplayTimer = setInterval(nextSlide, 1500);
 
 function restartAutoplay() {
     clearInterval(autoplayTimer);
-    autoplayTimer = setInterval(nextSlide, 3000);
+    autoplayTimer = setInterval(nextSlide, 2000);
 }
 
 nextBtn.addEventListener('click', () => {

@@ -124,8 +124,8 @@ body {
 
 /* Tamanho otimizado para preencher horizontalmente sem quebrar no iPhone SE */
 .slide {
-    min-width: 240px; /* Diminuiu de 280px */
-    height: 240px;    /* Diminuiu de 280px */
+    min-width: 210px; /* Diminuímos a largura */
+    height: 315px;    /* Aumentamos a altura para virar um retângulo vertical */
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
@@ -138,8 +138,8 @@ body {
 .slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center; /* Garante que a foto fique centralizada no card */
+   object-fit: contain; /* Mostra a foto inteira do iPhone sem nenhum zoom */
+    background-color: #000; /* Opcional: adiciona um fundo preto (ou da cor que quiser) nas sobrinhas laterais */
 }
 
 /* Botões de controle inferiores */
