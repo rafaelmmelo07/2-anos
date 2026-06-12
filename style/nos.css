@@ -135,11 +135,14 @@ body {
 }
 
 /* Imagens agora ficam normais, sem rotação inversa */
+/* Subititua o seu .slide img por este: */
 .slide img {
     width: 100%;
     height: 100%;
-   object-fit: contain; /* Mostra a foto inteira do iPhone sem nenhum zoom */
-    background-color: #000; /* Opcional: adiciona um fundo preto (ou da cor que quiser) nas sobrinhas laterais */
+    object-fit: cover;
+    object-position: center;
+    image-orientation: from-image; /* Força o navegador a ler a orientação correta do iPhone */
+    transform: rotate(0deg);       /* Garante que nenhuma regra antiga esteja girando a foto */
 }
 
 /* Botões de controle inferiores */
