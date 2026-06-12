@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*=============================== TOPO DA TELA  HEADER */
+
+header {
+    background-color: rgb(221, 183, 113);
+    position: fixed;
+    height: 90px;
+    width: 100%;
+    display: flex;
+    top: 0;
+    left: 0;
+}
+
+.coracaoHeader {
+    position: absolute;
+    left: 50%;
+    /* 2. Move para o meio horizontal da tela */
+    top: 50%;
+    /* 3. Move para o meio vertical do header */
+    transform: translate(-50%, -50%);
+    /* 4. Alinha o centro do coração no centro da tela */
+    z-index: 99;
+    /* 5. Garante que ele fique por cima dos outros elementos */
+    height: 40px;
+
+}
+
+
+.coracaoHeader img {
+    height: 40px;
+
+}
+
+.pai2 {
+    display: flex;
+    width: 100%;
+}
+
+
+#div01 {
+    width: 100%;
+    border-bottom: 5px solid rgb(255, 246, 246);
+    height: 1px;
+    border-radius: 20px;
+    margin-top: auto;
+}
+
+.div02 {
+    display: flex;
+    align-items: end;
+}
+
+.botoes {
+    display: flex;
+    gap: 30px;
+
+}
+
+
+.botoes button {
+    height: 30px;
+    width: 80px;
+    border-radius: 5px;
+    background-color: rgb(218, 183, 130);
+    color: aliceblue;
+    position: relative;
+    z-index: 10;
+    font-family: "Fraunces", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings:
+        "SOFT" 0,
+        "WONK" 0;
+}
+
+.botoes ol {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+
+#div03 {
+    width: 100%;
+    border-bottom: 5px solid rgb(255, 255, 255);
+    height: 1px;
+    border-radius: 20px;
+    margin-top: auto
+}
+
+/*========================================================*/
+
+
+
+/*======================================= meio da tela  SECTION*/
+
+section {
+    margin-top: 25%;
+    height: 85vh;
+    width: 100%;
+}
+
+.meio {
+    background-image: url(../img/fundo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    position: relative;
+    /*garante que o absoluto de baixo seja relaativo a ele */
+
+}
+
+.texto1 {
+    justify-content: center;
+    margin-top: 420px;
+    /* Mantém o botão no fundo do container flex */
+    margin-bottom: 110px;
+    /* ADICIONADO: Empurra o botão para cima do footer fixo */
+}
+
+.texto1 button {
+    height: 100px;
+    border-radius: 5px;
+    border-color: rgb(245, 245, 245);
+    background-color: rgb(255, 240, 232);
+    color: rgb(182, 128, 91);
+
+
+
+
+
+    font-family: "Fraunces", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings:
+        "SOFT" 0,
+        "WONK" 0;
+    font-size: 15px;
+
+
+}
+
+
+
+
+.imagens img {
+
+    height: 100px;
+    border-radius: 5px;
+
+}
+
+.imagens {
+    height: 200px;
+    margin-top: 10px;
+
+
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    position: absolute;
+    left: 0;
+}
+
+#festaJunina {
+    height: 150px;
+
+}
+
+#rodizio {
+    height: 250px;
+}
+
+/*=========================================================================*/
+
+/*FOOTER*/
+
+
+/*=========================================================================*/
+/*FOOTER*/
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    height: 80px;
+    /* Aumentado para 100px para caber o coração igual à pag1 */
+    z-index: 10;
+}
+
+.paiFooter3 {
+    display: flex;
+    width: 100%;
+    align-items: flex-end;
+    /* Alinha as linhas por baixo */
+}
+
+#div1F01 {
+    width: 100%;
+    border-top: 5px solid rgb(117, 81, 41);
+    height: 30px;
+    border-radius: 1px;
+}
+
+#div2F02 {
+    color: honeydew;
+    height: 105px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+}
+
+#div2F02 img {
+    height: 40px;
+}
+
+#div3F03 {
+    width: 100%;
+    border-top: 5px solid rgb(138, 105, 43);
+    height: 30px;
+    border-radius: 1px;
+}

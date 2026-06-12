@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+
+
+/*HEADER================*/
+
+
+header{
+    background-color: rgb(255, 209, 215);
+    position: fixed;
+    height:90px;
+    width: 100%;
+    display: flex;
+    top: 0;
+    left: 0;
+}
+
+
+.coracaoHeader2 {
+    position: absolute;      
+    left: 50%;               /* 2. Move para o meio horizontal da tela */
+    top: 50%;                /* 3. Move para o meio vertical do header */
+    transform: translate(-50%, -50%); /* 4. Alinha o centro do coração no centro da tela */
+    z-index: 99;             /* 5. Garante que ele fique por cima dos outros elementos */
+    height: 40px;
+
+}
+
+
+.coracaoHeader2 img{
+    height: 40px;
+    
+}
+
+.pai2D{
+    display: flex;
+    width: 100%;
+}
+
+
+#div01D{
+     width: 100%;
+  border-bottom: 5px solid rgb(255, 251, 254);
+  height: 1px;
+  border-radius: 20px;
+  margin-top: auto;
+}
+
+.div02D{
+  display: flex;
+  align-items: end;
+}
+
+.botoesD{
+    
+    gap: 30px;
+
+}
+
+
+.botoesD button{
+    height: 30px;
+    width: 80px;
+    border-radius: 5px;
+    background-color: rgb(150, 32, 124);
+    color: aliceblue;
+
+
+/*FONTE DO BOTAO*/
+      font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings:
+    "SOFT" 0,
+    "WONK" 0;
+}
+
+.botoesD ol{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+
+#div03D{
+     width: 100%;
+  border-bottom: 5px solid rgb(248, 248, 248);
+  height: 1px;
+  border-radius: 20px;
+  margin-top: auto}
+
+
+
+
+
+
+
+/*============================================*/
+
+
+section{
+    margin-top: 25%;
+    height: 85vh;
+    width: 100%;
+}
+
+
+.meioD{
+ background-image: url(../img/fundo2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+
+     
+   
+   position: fixed;
+   align-items: center;
+   position: relative; 
+}
+
+/*======================================*/
+
+/*================= parte do meio ==========*/
+
+
+
+
+
+
+.elementosDeclaracao{
+ 
+    display:flex;
+    margin-left: 30px;
+    margin-top: 40px;
+    position: fixed;
+  flex-direction: column;
+  align-items: center; 
+  list-style: none;
+
+  gap: 40px;
+
+}
+
+
+.elementosDeclaracao button{
+    height: 90px;
+    width: 200px;
+}
+
+
+#olhos{
+    height: 100px;
+    border-radius: 5px;
+}
+
+#sorriso{
+    height: 200px;
+    border-radius: 5px;
+    width:auto;
+}
+
+
+
+
+
+/*================================ FOOTER */
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    height: 80px; /* Aumentado para 100px para caber o coração igual à pag1 */
+    z-index: 10;
+}
+
+.paiFooter3D {
+    display: flex;
+    width: 100%;
+    align-items: flex-end; /* Alinha as linhas por baixo */
+}
+
+#div1FD{
+    width: 100%;
+    border-top: 5px solid rgb(255, 176, 225);
+    height: 45px;
+    border-radius: 1px;
+}
+
+#div2FD {
+    color: rgb(240, 241, 255);
+    height: 105px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+}
+
+#div2FD img {
+    height: 40px;
+}
+
+#div3FD {
+    width: 100%;
+    border-top: 5px solid rgb(255, 175, 248);
+    height: 45px;
+    border-radius: 1px;
+}

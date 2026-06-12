@@ -1,0 +1,210 @@
+/* RESET E DEFINIÇÃO DA TELA FIXA DO CELULAR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden; /* Bloqueia barras de rolagem na tela */
+    background-color: #fff;
+}
+
+/* --- HEADER ORIGINAL (iPhone SE Size) --- */
+.main-header {
+    background-color: rgb(255, 209, 215);
+    position: fixed;
+    height: 90px;
+    width: 100%;
+    display: flex;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.header-heart-center {
+    position: absolute;      
+    left: 50%;               
+    top: 50%;                
+    transform: translate(-50%, -50%); 
+    z-index: 99;             
+    height: 40px;
+}
+
+.header-heart-center img {
+    height: 40px;
+}
+
+.header-flex-container {
+    display: flex;
+    width: 100%;
+}
+
+#header-line-left {
+    width: 100%;
+    border-bottom: 5px solid rgb(255, 251, 254);
+    height: 1px;
+    border-radius: 20px;
+    margin-top: auto;
+}
+
+.header-nav-center {
+    display: flex;
+    align-items: end;
+}
+
+.header-buttons-wrapper ol {
+    display: flex;
+    list-style: none;
+    gap: 8px;
+    padding: 0 5px;
+}
+
+.btn-nav-custom {
+    height: 30px;
+    width: 72px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(150, 32, 124);
+    color: aliceblue;
+    cursor: pointer;
+    
+    font-family: "Fraunces", serif;
+    font-size: 0.7rem;
+    font-weight: normal;
+    font-style: normal;
+}
+
+#header-line-right {
+    width: 100%;
+    border-bottom: 5px solid rgb(248, 248, 248);
+    height: 1px;
+    border-radius: 20px;
+    margin-top: auto;
+}
+
+/* --- SEÇÃO CENTRAL / CARROSSEL 100% HORIZONTAL --- */
+.main-content {
+    flex: 1;
+    height: 200px;
+    margin-top: 90px;    
+    margin-bottom: 80px; 
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    background-image: url(../img/fundo2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.carousel-wrapper {
+    width: 100%;
+    padding: 10px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 15px;
+    /* Alinha o primeiro card perfeitamente centralizado na tela do iPhone SE */
+    padding: 0 47px; 
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform;
+}
+
+/* Tamanho otimizado para preencher horizontalmente sem quebrar no iPhone SE */
+.slide {
+    min-width: 280px;
+    height: 280px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    position: relative;
+    background-color: rgb(230, 150, 196);
+    flex-shrink: 0; /* Impede os cards de esmagarem */
+}
+
+/* Imagens agora ficam normais, sem rotação inversa */
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Botões de controle inferiores */
+.carousel-controls {
+    display: flex;
+    gap: 20px;
+    margin-top: 15px;
+    z-index: 20;
+}
+
+.control-btn {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(150, 32, 124);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* --- FOOTER ORIGINAL (iPhone SE Size) --- */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    height: 80px;
+    z-index: 10;
+    background-color: rgb(255, 233, 253);
+}
+
+.footer-flex-container {
+    display: flex;
+    width: 100%;
+    align-items: flex-end;
+}
+
+#footer-line-left {
+    width: 100%;
+    border-top: 5px solid rgb(255, 176, 225);
+    height: 35px;
+    border-radius: 1px;
+}
+
+#footer-heart-center {
+    color: rgb(240, 241, 255);
+    height: 105px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+}
+
+#footer-heart-center img {
+    height: 30px;
+}
+
+#footer-line-right {
+    width: 100%;
+    border-top: 5px solid rgb(255, 175, 248);
+    height: 5px;
+    border-radius: 1px;
+}
